@@ -11,9 +11,10 @@
     <AssemblyName>ShopSampleProject</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,7 +48,28 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>buy_64.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -74,11 +96,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\DBClass.vb" />
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="frmEx.Designer.vb">
+      <DependentUpon>frmEx.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEx.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExtype.Designer.vb">
+      <DependentUpon>frmExtype.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmExtype.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMember.Designer.vb">
@@ -87,10 +132,58 @@
     <Compile Include="frmMember.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmMember2.Designer.vb">
+      <DependentUpon>frmMember2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMember2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProduct.Designer.vb">
+      <DependentUpon>frmProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmProductType.Designer.vb">
       <DependentUpon>frmProductType.vb</DependentUpon>
     </Compile>
     <Compile Include="frmProductType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportMember.Designer.vb">
+      <DependentUpon>frmReportMember.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportMember.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportProduct.Designer.vb">
+      <DependentUpon>frmReportProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSale.Designer.vb">
+      <DependentUpon>frmSale.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSale.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchMember.Designer.vb">
+      <DependentUpon>frmSearchMember.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchMember.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStockin.Designer.vb">
+      <DependentUpon>frmStockin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStockin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStockinList.Designer.vb">
+      <DependentUpon>frmStockinList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStockinList.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmVendor.Designer.vb">
@@ -115,16 +208,53 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="SharedVar.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEx.resx">
+      <DependentUpon>frmEx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExtype.resx">
+      <DependentUpon>frmExtype.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMember.resx">
       <DependentUpon>frmMember.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMember2.resx">
+      <DependentUpon>frmMember2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProduct.resx">
+      <DependentUpon>frmProduct.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmProductType.resx">
       <DependentUpon>frmProductType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportMember.resx">
+      <DependentUpon>frmReportMember.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportProduct.resx">
+      <DependentUpon>frmReportProduct.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSale.resx">
+      <DependentUpon>frmSale.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchMember.resx">
+      <DependentUpon>frmSearchMember.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStockin.resx">
+      <DependentUpon>frmStockin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStockinList.resx">
+      <DependentUpon>frmStockinList.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVendor.resx">
       <DependentUpon>frmVendor.vb</DependentUpon>
@@ -135,6 +265,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="rptMember.rdlc" />
+    <EmbeddedResource Include="rptProduct.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
@@ -147,6 +279,24 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="buy_64.ico" />
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

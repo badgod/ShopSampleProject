@@ -31,7 +31,7 @@ Public Class frmMember
     End Sub
 
     Private Sub ShowData()
-        Dim sql As String = "SELECT * FROM tb_Mem"
+        Dim sql As String = "SELECT * FROM tb_member"
 
         com = New SqlCommand
 
